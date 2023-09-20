@@ -19,4 +19,20 @@ sudo apt install code
 wget -O ~/discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 sudo apt install ~/discord.deb
 
+# Install Docker Desktop
+wget https://desktop.docker.com/linux/stable/Docker-CE.x86_64.deb
+sudo dpkg -i Docker-CE.x86_64.deb
+sudo apt-get install -f
+sudo usermod -aG docker $USER
+
+# Install Docker
+sudo apt install docker.io
+
+# Start and enable Docker service (to ensure it starts on boot)
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Add your user to the "docker" group to run Docker commands without sudo
+sudo usermod -aG docker $USER
+
 echo "Installation completed!"
