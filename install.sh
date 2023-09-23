@@ -35,4 +35,7 @@ sudo systemctl enable docker
 # Add your user to the "docker" group to run Docker commands without sudo
 sudo usermod -aG docker $USER
 
+# Installer PostgreSQL
+sudo apt install -y postgresql postgresql-contrib
+
 echo "Installation completed!"
