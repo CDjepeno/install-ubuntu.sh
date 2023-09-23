@@ -38,4 +38,19 @@ sudo usermod -aG docker $USER
 # Installer PostgreSQL
 sudo apt install -y postgresql postgresql-contrib
 
+# Installer Git
+sudo apt install git
+
+# Télécharger le fichier d'installation Slack
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.23.0-amd64.deb -O slack.deb
+
+# Installer Slack à partir du fichier .deb téléchargé
+sudo dpkg -i slack.deb
+
+# Si vous avez des dépendances non satisfaites, exécutez la commande suivante pour les résoudre :
+# sudo apt install -f
+
+# Supprimer le fichier .deb après l'installation
+rm slack.deb
+
 echo "Installation completed!"
